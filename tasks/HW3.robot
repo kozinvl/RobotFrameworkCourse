@@ -1,11 +1,14 @@
 *** Settings ***
 Library           Collections
+Library           Process
+Library           OperatingSystem
 
 *** Variables ***
 ${scalar}         Hi
 @{list}           How    are    you?
 @{clear list}
 &{dictionary}     vasya=1    petya=2
+${yavornytskoho street}    Yavornytskoho str.
 
 *** Test Cases ***
 Scalar variables
@@ -22,6 +25,16 @@ Dictionary variables
     update and remove your dict    &{dictionary}
     nested dict?    Yes    &{dictionary}
     Log with navigation
+
+Environment variables
+    Log All Environments
+
+Inside variables
+    inside var    yavornytskoho
+
+Internal variables
+    Your Test Suite and Case
+    Path to Log and Report file
 
 *** Keywords ***
 create and log dictionaries
@@ -74,3 +87,23 @@ Log with navigation
     Log    ${dictionary.vasya}
     Log    ${dictionary.petya}
     Log many    &{dictionary}[vasya]    &{dictionary}[petya]
+
+Log All Environments
+    ${PATH}=    Get Environment Variable    PATH
+    ${OSystem}=    Get Environment Variable    OS
+    ${SystemDir}=    Get Environment Variable    WINDIR
+    ${UserName}=    Get Environment Variable    USERNAME
+    ${ProcessorLevel}=    Get Environment Variable    PROCESSOR_LEVEL
+    ${ComputerName}=    Get Environment Variable    COMPUTERNAME
+
+inside var
+    [Arguments]    ${name}
+    Log    ${${name} street}
+
+Your Test Suite and Case
+    Log    ${SUITE NAME}
+    Log    ${TEST NAME}
+
+Path to Log and Report file
+    Log    ${LOG FILE}
+    Log    ${REPORT FILE}
