@@ -2,6 +2,7 @@
 Library           Collections
 Library           Process
 Library           OperatingSystem
+Variables         python_variables.py
 
 *** Variables ***
 ${scalar}         Hi
@@ -35,6 +36,12 @@ Inside variables
 Internal variables
     Your Test Suite and Case
     Path to Log and Report file
+
+Log python var
+    Log    ${INT}    console=true
+    Log many    @{PY_LIST}    console=true
+    Log    ${PY_DICT}    console=true
+    Log    ${NUMBERS}    console=true
 
 *** Keywords ***
 create and log dictionaries
