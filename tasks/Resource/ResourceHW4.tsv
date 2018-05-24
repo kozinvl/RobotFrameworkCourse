@@ -1,0 +1,47 @@
+*Variables*							
+${product1}	100						
+${product2}	50						
+${100%}	100						
+							
+*Keywords*							
+Total discount price	[Arguments]	${price1}	${price2}				
+	[Documentation]	Calculating total discount price.					
+	...						
+	...	Using example:					
+	...						
+	...	sum = Total discount price \ 100 \ \ | \ \ \ 50					
+	...						
+	...	sum = 5.0					
+	${total_sum}=	mathematic.add	100	50			
+	${total_price}=	Total price	100	50			
+	${discount_price}=	mathematic.subtract	${total_sum}	${total_price}			
+	Log to console	discount price=${discount_price}					
+	Log to Console	total_price=${total_price}					
+							
+Total price	[Arguments]	${price1}	${price2}				
+	[Documentation]	Calculating total price.					
+	...						
+	...	Using example:					
+	...						
+	...	sum = Total price \ 100 \ \ | \ \ \ 50					
+	...						
+	...	sum = 145					
+	${total_discount_price}=	discount sum	${price1}	5	${price2}	0	
+	[Return]	${total_discount_price}					
+							
+discount price	[Arguments]	${price}	${discount}				
+	[Documentation]	Calculating discount price with using formula					
+	...						
+	...	Using example:					
+	...	Price*discount/100% 					
+	${discount1}=	mathematic.multiply	${price}	${discount}			
+	${discount2}=	mathematic.divide	${discount1}	${100%}			
+	${price_discount}=	mathematic.subtract	${price}	${discount2}			
+	[Return]	${price_discount}					
+							
+discount sum	[Arguments]	${price1}	${discount1}	${price2}	${discount2}		
+	[Documentation]	Return calculating discount sum of products					
+	${discount_price1}=	discount price	${price1}	${discount1}			
+	${discount_price2}=	discount price	${price2}	${discount2}			
+	${discount_sum}=	mathematic.add	${discount_price1}	${discount_price2}			
+	[Return]	${discount_sum}					
