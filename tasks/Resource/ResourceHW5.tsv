@@ -1,0 +1,35 @@
+*Variables*							
+@{parametrs}	host	user	password				
+							
+*Keywords*							
+Verify UI	Log	Something verify					
+	[Return]	FAILED					
+							
+Verify backend	Log	verify backend					
+	[Return]	PASSED					
+							
+Edit configuration	[Arguments]	@{str}					
+	Log	@{str} has been changed	console=true				
+							
+Backup configuration	Log	Store configuration file	console=true				
+							
+Restore configuration	Log	Restore configuration file	console=true				
+							
+Run	[Arguments]	${string}=CLI					
+	Log	CLI	console=true				
+							
+Login To Remote Host	Log	Login to remote host	console=true				
+							
+Exit From Remote Host	Log	Exit from remote host	console=true				
+							
+Created directory	[Arguments]	${dir}					
+	: FOR	${i}	IN RANGE	1	5		
+		Log	${dir}-${i} has been added	console=true			
+							
+Loop configuration	[Arguments]	@{parametrs}					
+	: FOR	${item}	IN	@{parametrs}			
+		Edit configuration	${item}				
+		Backup configuration					
+		${verify backend}=	Verify Backend				
+		Run Keyword unless	'${verify backend}' =='PASSED'	Set Tags	Backend_Error		
+		Run keyword if	${TEST TAGS}=='Backend_Error'	Restore Configuration			
