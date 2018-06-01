@@ -1,0 +1,8 @@
+-T
+--metadata version:0.1 
+--metadata author:KozinV
+--metadata data:High priority
+--metadata type of testing: Non-functional
+--rerunfailed all Logs/log only testsuite1/output-20180601-130431.xml 
+TestSuite1
+
