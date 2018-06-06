@@ -38,7 +38,7 @@ update and remove your dict	[Arguments]	&{this dict}
 	Pop From Dictionary	${this dict}	ivan				
 	Log many	${this dict}					
 							
-nested dict?	[Arguments]	${var}	&{dict}				
+nested dict	[Arguments]	${var}	&{dict}				
 	Pass Execution If	'${var}' != 'Yes'	Please input 'Yes' in case				
 	&{nested}=	Create Dictionary	First name=number	added name=${dict}			
 	Log many	${nested}					

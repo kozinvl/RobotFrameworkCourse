@@ -15,5 +15,5 @@ List variables
 Dictionary variables
     create and log dictionaries
     update and remove your dict    &{dictionary}
-    nested dict?    Yes    &{dictionary}
+    nested dict    Yes    &{dictionary}
     Log with navigation
