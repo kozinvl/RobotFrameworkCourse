@@ -18,7 +18,7 @@ Remote Server
     Get File    /tmp/demo.txt    ${CURDIR}/tmp/
     Remote Connection with SSH key
     Switch Connection    first_connection
-    Execute Command    rm -f /tmp/demo.txt\n
+    Execute Command    rm -f /tmp/demo.txt
     Switch Connection    second_connection
     File Should Not Exist    /tmp/demo.txt
     Close All Connections
@@ -32,5 +32,5 @@ Remote Connection with SSH key
     ${output}    Read Until    this is text
 
 Write Some Text
-    Write until expected output    cat>/tmp/demo.txt\n    \    timeout=5s    retry_interval=2s
+    Write until expected output    cat>/tmp/demo.txt    \    timeout=5s    retry_interval=2s
     Write    this is text
