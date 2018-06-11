@@ -1,0 +1,19 @@
+*Variables*							
+${NEW_BUTTON}	id:newbutton						
+${EDIT_BUTTON}	xpath://input[@value='Edit..']						
+${URL}	http://commentssprintone.azurewebsites.net/						
+${BROWSER}	chrome						
+${TITLE NAME}	Index						
+${FIRST CHECKBOX ON MAIN}	xpath:.//INPUT[@type='checkbox'][1]						
+${CATEGORY LABEL}	id:SelectedCateg						
+${APPLY BUTTON}	id:applybutton						
+${SEND TEXT FIELD}	id:Text						
+${SAVE&RETURN}	xpath:.//*/input[@value='Save & Return']						
+${PUSH ONE CATEGORY}	name:CurSelect						
+${ADD CAT 5 IN CATEGORIES}	xpath:.//*[@id='Categories'][@name='Categories'][@value = 6]						
+${CHANGE STATUS}	id:SelectedStatus						
+${CHECKBOX_STATUS}	id:Active						
+							
+*Keywords*							
+Set Up Default Settings Browser	Open Browser	${URL}	${BROWSER}				
+	Set Selenium speed	0.15 seconds					
