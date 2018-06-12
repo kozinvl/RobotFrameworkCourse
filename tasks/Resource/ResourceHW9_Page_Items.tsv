@@ -1,3 +1,6 @@
+*Settings*							
+Library	Selenium2Library						
+							
 *Variables*							
 ${NEW_BUTTON}	id:newbutton						
 ${EDIT_BUTTON}	xpath://input[@value='Edit..']						
@@ -7,13 +10,15 @@ ${TITLE NAME}	Index
 ${FIRST CHECKBOX ON MAIN}	xpath:.//INPUT[@type='checkbox'][1]						
 ${CATEGORY LABEL}	id:SelectedCateg						
 ${APPLY BUTTON}	id:applybutton						
-${SEND TEXT FIELD}	id:Text						
+${INPUT TEXT FIELD}	id:Text						
 ${SAVE&RETURN}	xpath:.//*/input[@value='Save & Return']						
 ${PUSH ONE CATEGORY}	name:CurSelect						
 ${ADD CAT 5 IN CATEGORIES}	xpath:.//*[@id='Categories'][@name='Categories'][@value = 6]						
 ${CHANGE STATUS}	id:SelectedStatus						
 ${CHECKBOX_STATUS}	id:Active						
+${COLUMN NUMBER}	xpath:.//*[@class='webgrid-row-style'][1]//*[@class='numbercolumn']	# first row (number cell)					
 							
 *Keywords*							
-Set Up Default Settings Browser	Open Browser	${URL}	${BROWSER}				
+Set Up Settings Browser
+    Open Browser	${URL}	${BROWSER}
 	Set Selenium speed	0.15 seconds					
