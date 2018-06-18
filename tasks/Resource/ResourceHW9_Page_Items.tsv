@@ -11,8 +11,8 @@ ${FIRST CHECKBOX ON MAIN}	xpath:.//INPUT[@type='checkbox'][1]
 ${CATEGORY LABEL}	id:SelectedCateg						
 ${APPLY BUTTON}	id:applybutton						
 ${INPUT TEXT FIELD}	id:Text						
-${SAVE&RETURN}	xpath:.//*/input[@value='Save & Return']						
-${PUSH ONE CATEGORY}	name:CurSelect						
+${SAVE_RETURN}	xpath:.//*/input[@value='Save & Return']
+${CONFIRM ONE CATEGORY}	name:CurSelect
 ${ADD CAT 5 IN CATEGORIES}	xpath:.//*[@id='Categories'][@name='Categories'][@value = 6]						
 ${CHANGE STATUS}	id:SelectedStatus						
 ${CHECKBOX_STATUS}	id:Active						

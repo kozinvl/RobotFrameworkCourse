@@ -23,8 +23,8 @@ TEST
     Input Text    ${INPUT TEXT FIELD}    My new comment from RF
     UnSelect Checkbox    ${CHECKBOX_STATUS}
     Click Element    ${ADD CAT 5 IN CATEGORIES}
-    Click Element    ${PUSH ONE CATEGORY}
-    Click Element    ${SAVE&RETURN}
+    Click Element    ${CONFIRM ONE CATEGORY}
+    Click Element    ${SAVE_RETURN}
     Select From List By Label    ${CHANGE STATUS}    Inactive
     Click Button    ${APPLY BUTTON}
     Page Should Contain    My new comment from RF
