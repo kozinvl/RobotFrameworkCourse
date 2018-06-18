@@ -21,4 +21,4 @@ ${COLUMN NUMBER}	xpath:.//*[@class='webgrid-row-style'][1]//*[@class='numbercolu
 *Keywords*							
 Set Up Settings Browser
     Open Browser	${URL}	${BROWSER}
-	Set Selenium speed	0.15 seconds					
+    Set Selenium speed	0.15 seconds
