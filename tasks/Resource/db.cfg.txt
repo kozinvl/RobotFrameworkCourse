@@ -1,0 +1,2 @@
+dbapiModuleName=pymysql | dbName=vkozin | dbUsername=vkozin | dbPassword=vkozinpass | dbHost=192.000.000.00 | dbPort=0000 | dbCharset=None
+
