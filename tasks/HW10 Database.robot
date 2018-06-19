@@ -2,24 +2,24 @@
 Library           DatabaseLibrary
 
 *** Variables ***
-${IP}             192.168.242.44
+${IP}             192.000.000.00
 ${PORT}           3306
 ${sql_script}     /Users/vkozin/Downloads/newhome/HW/Resource/sql.txt
-${path}           ${EXECDIR}/Resource/db.cfg
+${config}         c:\\db.cfg
 ${DB}             pymysql
 
 *** Test Cases ***
 Prepared parametrs
-    Connect to Database    default=/db.cfg
+    Connect to Database    dbConfigFile=${config}
     ${result}    Select Salary from DB
+    Should Be Empty    ${result}
     Disconnect From Database
 
 Using all parametrs
     Connect to Database    ${DB}    vkozin    vkozin    vkozinpass    ${IP}    ${PORT}
-    ${res}    Select Salary from DB
-    #Delete all Rows From Table    demo1
-    #Row Count is 0    select * from demo1
-    #Disconnect From Database
+    Delete all Rows From Table    demo1
+    Row Count is 0    select * from demo1
+    Disconnect From Database
 
 Custom parameters
     Connect To Database Using Custom Params    ${DB}    database='vkozin',user='vkozin', password='vkozinpass', host='${IP}',port=${PORT}
