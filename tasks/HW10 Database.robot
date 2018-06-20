@@ -11,8 +11,8 @@ ${DB}             pymysql
 *** Test Cases ***
 Prepared parametrs
     Connect to Database    dbConfigFile=${config}
-    ${result}    Select Salary from DB
-    Should Be Empty    ${result}
+    ${result}=    Select Salary from DB
+    Should be Empty    ${result}
     Disconnect From Database
 
 Using all parametrs
@@ -29,7 +29,8 @@ Custom parameters
 
 *** Keywords ***
 Select Salary from DB
-    Query    SELECT salary FROM demo1 WHERE Age < 7 AND Salary > 0
+    ${select}    Query    SELECT salary FROM demo1 WHERE Age < 7 AND Salary > 0
+    [Return]    ${select}
 
 Add Records
     Execute SQL Script    ${sql_script}

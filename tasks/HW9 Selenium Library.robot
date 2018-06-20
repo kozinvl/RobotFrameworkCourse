@@ -2,7 +2,7 @@
 Suite Setup       Set Up Settings Browser
 Suite Teardown    Close All Browsers
 Library           Selenium2Library
-Resource          Resource/ResourceHW9_Page_Items.tsv
+Resource          ResourceHW9.tsv
 
 *** Test Cases ***
 TEST
