@@ -1,0 +1,10 @@
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (1, 'Jon', 'Do', 21, 10000);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (2, 'Ivan', 'Smith', 24, 12000);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (3, 'Marry', 'Popins', 17, 8000);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (4, 'Sergio', 'Trulle', 95, 0);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (5, 'Berta', 'Rassel', 34, 20000);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (6, 'Trune', 'Urroro', 45, 30000);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (7, 'Agneta', 'Bartovna', 60, 15000);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (8, 'Violetta', 'White', 7, 0);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (9, 'Lion', 'Goodwin', 2, 99999);
+INSERT INTO demo1 (id, name, surname, age, salary) VALUES (10, 'Karetto', 'Jovanny', 50, 50000);
