@@ -1,4 +1,26 @@
 *** Settings ***
+Documentation     Precondition:
+...               You have to logged in to Linux/MacOS host.
+...               Test case #1:
+...               Go to home directory.
+...               Create python source code file.
+...               Make it executable.
+...               Run it.
+...               Check results.
+...               Run it again and store stdout to a file.
+...               Grep results from the file.
+...               Check results.
+...               Copy this file to /tmp directory
+...               Create a directory with name src in the home directory.
+...               Move python file there.
+...               List directory and log results.
+...               Test case #2:
+...               Go to /var/log directory. (Note: the path can be differ in your environment)
+...               Try to find "ERROR" string in the "messages" file with help foreground keyword. (you can use other big log file in your OS)
+...               Analyze the result object.
+...               Run cat /var/log/messages in background.
+...               Wait the process 0.1s on timeout terminate the process.
+...               Check the result object.
 Library           OperatingSystem
 Library           Process
 

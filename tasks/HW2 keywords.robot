@@ -1,4 +1,13 @@
 *** Settings ***
+Documentation     Create test case "Buy products" which should include:
+...               As a user you want to buy two products with discounts.
+...               The first product has price is 100. End discount is 5.
+...               The second product has price 50. End discount is 0.
+...               You have to calculate total price that you should to pay for both products in log it.
+...               High level keywords: calculation of discount price, total price.
+...               Lower-level keywords: calculation of discount sum, calculation of discount price
+...               Custom keywords: mathematical operations \ for: +, -. *, /
+...               for manual testers who don't know Python please use attached python file.mathemetical_operations.py
 Library           mathematic.py
 
 *** Variables ***

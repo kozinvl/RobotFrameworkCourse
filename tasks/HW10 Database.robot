@@ -1,4 +1,21 @@
 *** Settings ***
+Documentation     Test Case #1
+...               Connect to database with the prepared parameters in db.conf file.
+...               Select from demo1 people with age < 7. Implement it as a custom keyword.
+...               Test fail if salary > 0
+...               Disconnect from database
+...               Test Case #2
+...               Connect to database with using all parameters
+...               Delete all information from table demo1
+...               Calculate count of rows in the table
+...               Test fail if count of rows > 0.
+...               Disconnect from database
+...               Test Case #3
+...               Connect to database with using custom parameters
+...               Use Execute Sql Script to add ten records to demo1. Implement it as a custom keyword.
+...               Calculate count of records.
+...               Test fail if count of records <> 10.
+...               Disconnect from database
 Library           DatabaseLibrary
 
 *** Variables ***
