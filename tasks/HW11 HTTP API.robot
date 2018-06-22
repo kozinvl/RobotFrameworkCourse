@@ -1,4 +1,26 @@
 *** Settings ***
+Documentation     Use https://httpbin.org/
+...               Run simple Get https://httpbin.org/anything
+...               check in response "json": null, "method": "GET"
+...               Run Get with parameters https://httpbin.org/get?param=text
+...               check in response "param1": "text"
+...               Run Get with extra headers
+...               check extra headers in json
+...               Run Get https://httpbin.org/delay/3 with small timeout 1s
+...               Check error code
+...               Test Basic authorization. User "student". Password "111"
+...               https://httpbin.org/basic-auth/student/111
+...               Check
+...               {
+...               "authenticated": true,
+...               "user": "student"
+...               }
+...               Test Delete request https://httpbin.org/delete
+...               Check response
+...               Test simple Post request https://httpbin.org/post
+...               Generate json with parameters.
+...               Send to https://httpbin.org/post
+...               Check parameters in response.
 Test Teardown     Delete All Sessions
 Library           RequestsLibrary
 Library           Collections
