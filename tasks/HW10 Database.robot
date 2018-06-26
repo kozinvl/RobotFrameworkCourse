@@ -21,7 +21,7 @@ Library           DatabaseLibrary
 *** Variables ***
 ${IP}             192.000.000.00
 ${PORT}           3306
-${sql_script}     /Users/vkozin/Downloads/newhome/HW/Resource/sql.txt
+${sql_script}     /Users/vkozin/Downloads/newhome/HW/Resource/insert.sql
 ${config}         c:\\db.cfg
 ${DB_DRIVER}             pymysql
 
