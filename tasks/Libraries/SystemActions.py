@@ -29,6 +29,7 @@ class SystemActions:
 
     @keyword("Calculate md5 ${name}")
     def get_md5_sum(self, name):
+        """return MD5 hash sum"""
         md5 = hashlib.md5()
         try:
             with io.open(self.path + '/' + name, mode="rb") as fd:
