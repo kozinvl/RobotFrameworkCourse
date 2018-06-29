@@ -1,0 +1,18 @@
+HW:
+
+Create folders hierarchy.
+Robot\TestSuite1
+Robot\TestSuite2\TestSuite3
+Add two test suite to TestSuite1.
+Add two test suite to TestSuite2.
+Add two test suite to TestSuite3.
+Each test suite should has two any test cases. One test should fails.
+Add different tags for test cases.
+Run TestSuite1.
+Run one test from TestSuite1 by name, by tag.
+Run all test suites in folder TestSuite2, but not in folder TestSuite3.
+Run test suites TestSuite1 and TestSuite3.
+Add metadata about build number, author, data, type of testing.
+Use argument file.
+Rerun failed test cases.
+Please send command line string with all parameters for each task. (or argument file as option)
